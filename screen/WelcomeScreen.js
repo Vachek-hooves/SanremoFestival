@@ -1,14 +1,19 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import {Text, TouchableOpacity, View} from 'react-native';
+import MainContainerLayout from '../components/layout/MainContainerLayout';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({navigation}) => {
   return (
-    <View>
-      <Text>WelcomeScreen</Text>
-    </View>
+    <MainContainerLayout>
+      <View style={{flex: 1}}>
+        <Text>Welcome screen</Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('MainScreen')}
+          style={{justifyContent: 'center', alignItems: 'center'}}>
+          <Text>MAIN MENU</Text>
+        </TouchableOpacity>
+      </View>
+    </MainContainerLayout>
   );
 };
 
 export default WelcomeScreen;
-
-const styles = StyleSheet.create({});
