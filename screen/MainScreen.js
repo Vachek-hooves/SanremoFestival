@@ -1,19 +1,19 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
 import MainContainerLayout from '../components/layout/MainContainerLayout';
-
-import {CustomLinearGradient} from '../components/ui';
+import {BlurContainer, ImagedBackground, MainScreenBtn} from '../components/ui';
 
 const MainScreen = () => {
   return (
-    <CustomLinearGradient>
-      <MainContainerLayout>
-        <Text>content</Text>
-      </MainContainerLayout>
-    </CustomLinearGradient>
+    <ImagedBackground>
+      <BlurContainer blurAmount={3}>
+        <MainContainerLayout
+          style={{justifyContent: 'center', alignItems: 'center'}}>
+          <MainScreenBtn screen={'GameScreen'}>Game</MainScreenBtn>
+          <MainScreenBtn>Gameplay</MainScreenBtn>
+          <MainScreenBtn>Profile</MainScreenBtn>
+        </MainContainerLayout>
+      </BlurContainer>
+    </ImagedBackground>
   );
 };
 
 export default MainScreen;
-
-const styles = StyleSheet.create({});

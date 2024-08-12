@@ -1,18 +1,23 @@
-import {Text, TouchableOpacity, View} from 'react-native';
+import {Text, Animated} from 'react-native';
+import {useEffect, useRef} from 'react';
+import {ImagedBackground} from '../components/ui';
 import MainContainerLayout from '../components/layout/MainContainerLayout';
 
 const WelcomeScreen = ({navigation}) => {
+  const animation = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    Animated.timing(animation, {
+      toValue: 1,
+      duration: 500,
+      useNativeDriver: true,
+    }).start(() => navigation.replace('MainScreen'));
+  }, [animation]);
   return (
-    <MainContainerLayout>
-      <View style={{flex: 1}}>
-        <Text>Welcome screen</Text>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('MainScreen')}
-          style={{justifyContent: 'center', alignItems: 'center'}}>
-          <Text>MAIN MENU</Text>
-        </TouchableOpacity>
-      </View>
-    </MainContainerLayout>
+    <ImagedBackground>
+      <MainContainerLayout>
+        <Text>Enjoy Jorney to the Sanremo Festival Quiz</Text>
+      </MainContainerLayout>
+    </ImagedBackground>
   );
 };
 

@@ -1,4 +1,4 @@
-import {useState, useEffect, createContext} from 'react';
+import {useState, useEffect, createContext, useContext} from 'react';
 import {saveDataByKey, fetchDataByKey} from './asyncStorageUtils';
 import {APP_DATA_QUIZ, APP_DATA_TRUE_FALSE} from '../data/appData';
 
@@ -6,13 +6,13 @@ export const AppContext = createContext({
   easyTrueFalse: [],
   hardTrueFalse: [],
   quiz: [],
+  requiredLevel: () => {},
 });
 
 export const AppProvider = ({children}) => {
   const [easyTrueFalse, setEasyTrueFalse] = useState([]);
   const [hardTrueFalse, setHardTrueFalse] = useState([]);
   const [quiz, setQuiz] = useState([]);
-
 
   useEffect(() => {
     bootAllData();
@@ -45,6 +45,25 @@ export const AppProvider = ({children}) => {
     }
   };
 
-  const value = {easyTrueFalse, hardTrueFalse, quiz};
+  const requiredLevel = complexity => {
+    switch (complexity) {
+      case 'easy':
+        return easyTrueFalse;
+      case 'hard':
+        return hardTrueFalse;
+      default:
+        break;
+    }
+  };
+
+  const value = {easyTrueFalse, hardTrueFalse, quiz, requiredLevel};
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+};
+
+export const useAppContext = () => {
+  const context = useContext(AppContext);
+  if (!context) {
+    throw new Error('useAppContext must be used within a AppProvider');
+  }
+  return context;
 };

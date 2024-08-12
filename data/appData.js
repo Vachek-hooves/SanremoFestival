@@ -1,34 +1,40 @@
 export const APP_DATA_TRUE_FALSE = [
   {
+    topic: 'Festival History',
     id: 'tf1',
     about:
       'History of the festival: Questions about the foundation, stages of development and important moments of the San Remo festival.',
     query: [
       {
-        image: '',
+        image:
+          'https://therake.com/media/.renditions/catalog/category/Stories/Sanremo2024/festival-sanremo-napoli.jpeg',
         question: 'The Sanremo Music Festival was founded in 1951.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Eurovision_Song_Contest_Jury_Final%2C_2016.jpg/1200px-Eurovision_Song_Contest_Jury_Final%2C_2016.jpg',
         question:
           'The festival was originally created as a competition for amateur singers. ',
         answer: false,
       },
       {
-        image: '',
+        image:
+          'https://plsn.com/site/wp-content/uploads/Robe-Sanremo-Music-Festival-2021-2021-03-04-at-14.22.53-4-460x345.jpg',
         question:
           'The Sanremo Music Festival has been held annually without interruption since its inception.',
         answer: false,
       },
       {
-        image: '',
+        image:
+          'https://mediaim.expedia.com/destination/1/e7556d23d4ac738fa65f05ed58627ebd.jpg',
         question:
           'The festival takes place in the city of Sanremo, located in the Liguria region of Italy.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://www.money.it/local/cache-vignettes/L300xH168/1f7823f459f594263ebdb5ebaa97ca-29937.jpg?1704465965',
         question:
           'The winner of the Sanremo Music Festival is automatically selected to represent Italy in the Eurovision Song Contest.',
         answer: false,
@@ -46,19 +52,20 @@ export const APP_DATA_TRUE_FALSE = [
         answer: false,
       },
       {
-        image: '',
+        image:
+          'https://i0.wp.com/mycornerofitaly.com/wp-content/uploads/2023/11/sanremo-festival.jpg?fit=800%2C600&ssl=1',
         question:
           'In 1984, the festival included a special category for international artists for the first time.',
         answer: true,
       },
       {
-        image: '',
+        image: 'https://www.tg24.info/network/wp-content/uploads/2023/02/sanremo-scenografia-cupola-2023-scaled-1-680x365_c.jpgs',
         question:
           'The Sanremo Music Festival is broadcast live on Italian television and is watched by millions of viewers each year.',
         answer: true,
       },
       {
-        image: '',
+        image: 'https://www.luminex.be/wp-content/uploads/2021/06/WhatsApp-Image-2021-03-04-at-14.22.52-4-1024x768.jpegs',
         question:
           'The festival has a significant cultural impact and is considered an important event in the Italian music calendar.',
         answer: true,
@@ -66,66 +73,77 @@ export const APP_DATA_TRUE_FALSE = [
     ],
   },
   {
+    topic: 'Festival Winners',
     id: 'tf2',
     about:
       'Winners of different years at the Sanremo Music Festival: Identify winners by specific years or songs that won.',
     query: [
       {
-        image: '',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/e/e3/Nilla_Pizzi_Sanremo_1951.jpg',
         question:
           'The winner of the Sanremo Music Festival in 1951 was Nilla Pizzi with the song "Grazie dei fiori."',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Modugno_durante_l%27esibizione_al_Festival_di_sanremo_del_1958.jpg/320px-Modugno_durante_l%27esibizione_al_Festival_di_sanremo_del_1958.jpg',
         question:
           'In 1967, the festival was won by the famous Italian singer Domenico Modugno with the song "Nel blu dipinto di blu."',
         answer: false, // He won in 1958.
       },
       {
-        image: '',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Toto_Cutugno.jpg/200px-Toto_Cutugno.jpg',
         question:
           'The winner of the Sanremo Music Festival in 1984 was the band Toto Cutugno with the song "Solo per amore."',
         answer: false, // He won with "L\'italiano."
       },
       {
-        image: '',
+        image:
+          'https://wikiwandv2-19431.kxcdn.com/_next/image?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Anna_Oxa_2.jpg/640px-Anna_Oxa_2.jpg&w=640&q=50',
         question:
           'In 1990, the festival was won by the duo Anna Oxa and Fausto Leali with their song "Ti lascerò."',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://www.lagazzettaitaliana.com/media/k2/items/cache/7260cbfd914be30cb6f02a858ccb3f60_L.jpg',
         question:
           'The Sanremo Music Festival in 2001 was won by the singer Elisa with the song "Luce (Tramonti a Nord Est)."',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/ESC2013_-_Italy_07_%28cropped%29.jpg/640px-ESC2013_-_Italy_07_%28cropped%29.jpg',
         question:
           'In 2010, the winner of the festival was Marco Mengoni with the song "Credimi ancora."',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://i0.wp.com/ilvoloflightcrw.com/wp-content/uploads/2017/07/image4.png?fit=660%2C330&ssl=1',
         question:
           'The winner of the Sanremo Music Festival in 2015 was Il Volo with their song "Grande amore."',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/d/d0/Ermal_Meta_and_Fabrizio_Moro_%28Italy_2018%29.jpg',
         question:
           'In 2018, the festival was won by Ermal Meta and Fabrizio Moro with the song "Non mi avete fatto niente."',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://wiwibloggs.com/wp-content/uploads/2020/02/diodato_sanremo2020.jpg',
         question:
           'The winner of the Sanremo Music Festival in 2020 was Diodato with the song "Fai rumore."',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://thateurovisionsite.com/wp-content/uploads/Mahmood-Blanco-Italy-2022.jpg',
         question:
           'In 2023, the festival was won by Mahmood and Blanco with their song "Brividi."',
         answer: true,
@@ -133,66 +151,75 @@ export const APP_DATA_TRUE_FALSE = [
     ],
   },
   {
+    topic: 'Festival Famos Performers',
     id: 'tf3',
     about:
       'Famous performers at the Sanremo Music Festival: Questions about artists who have performed, their careers, and hits.',
     query: [
       {
-        image: '',
+        image:
+          'https://c02.purpledshub.com/uploads/sites/43/2023/04/Andrea-Bocelli-d756f64.jpg',
         question:
           'Andrea Bocelli performed at the Sanremo Music Festival in 1994 and won with the song "Il mare calmo della sera."',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://londononeradio.com/wp-content/uploads/2018/09/Eros-Ramazzotti.jpg',
         question:
           'Eros Ramazzotti is known for his participation in the Sanremo Music Festival and won in 1986 with the song "Terra promessa."',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://www.billboard.com/wp-content/uploads/2023/03/Laura-Pausini-cr-Nima-Benati-2023-billboard-1548.jpg?w=1024',
         question:
           'Laura Pausini has never participated in the Sanremo Music Festival.',
         answer: false,
       },
       {
-        image: '',
+        image:
+          'https://alchetron.com/cdn/tiziano-ferro-e7557974-4310-47b9-9e2a-3f2acbf2ac5-resize-750.jpeg',
         question:
           'The singer Tiziano Ferro won the Sanremo Music Festival in 2006 with his hit song "Non me lo so spiegare."',
         answer: true,
       },
       {
-        image: '',
+        image: 'https://eurovisionfun.com/wp-content/uploads/2024/04/mina.webp',
         question:
           "Mina, one of Italy's most famous singers, has won the Sanremo Music Festival multiple times throughout her career.",
         answer: true,
       },
       {
-        image: '',
+        image: 'https://wiwibloggs.com/wp-content/uploads/2021/03/maneskin.jpg',
         question:
           'The band Maneskin won the Sanremo Music Festival in 2021 with the song "Zitti e buoni" before going on to win Eurovision.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Alessandra_Amoroso_Firenze.jpg/320px-Alessandra_Amoroso_Firenze.jpg',
         question:
           'Alessandra Amoroso won the Sanremo Music Festival in 2015 with her song "Comunque andare."',
         answer: false,
       },
       {
-        image: '',
+        image:
+          'https://cdns-images.dzcdn.net/images/artist/092887d47c09565b41d8b1349648a2f7/500x500.jpg',
         question:
           'The artist Fabrizio De André is known for his participation in the Sanremo Music Festival during the 1960s and is celebrated for his poetic lyrics.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Giannimorandi.jpg/1200px-Giannimorandi.jpg',
         question:
           'Gianni Morandi has been a regular participant in the Sanremo Music Festival since its inception in 1951.',
         answer: false, // He started participating in the 1960s.
       },
       {
-        image: '',
+        image:
+          'https://www.iitaly.org/sites/default/files/styles/article-slideshow-visual/public/slideshow_pro/andrea_mariano.jpg',
         question:
           'The singer Negramaro participated in the Sanremo Music Festival in 2005 and gained significant fame afterward.',
         answer: true,
@@ -200,48 +227,56 @@ export const APP_DATA_TRUE_FALSE = [
     ],
   },
   {
+    topic: 'Festival Best Songs',
     id: 'tf4',
     about:
       'Popular songs from the Sanremo Music Festival: Identify songs that became iconic after their festival participation or guess them from text fragments.',
     query: [
       {
-        image: '',
+        image:
+          'https://acrimonia.it/user/pages/06.articles/sanremo-amore-mio/Sanremo.jpg',
         question:
           'The song "Volare" by Domenico Modugno won the Sanremo Music Festival in 1958 and became an international hit.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://staticfanpage.akamaized.net/wp-content/uploads/sites/33/2024/01/scenografia-sanremo-2024-palco-significato-1200x675.jpg',
         question:
           '"Felicità" by Al Bano and Romina Power was a runner-up at Sanremo in 1984 but is not considered a classic.',
         answer: false,
       },
       {
-        image: '',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgqS0oEFrvikz5nKlOBm6EXP9x21aHA3nKb9hlxpbduaWWuaEjkvKkAeooUiWItavxgp8&usqp=CAU',
         question:
           '"Dove sono i tuoi occhi" by Negramaro was performed at Sanremo and gained significant popularity afterward.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://staticfanpage.akamaized.net/wp-content/uploads/sites/33/2023/12/festival-sanremo-scenografia-palco.gif',
         question:
           'The song "L\'italiano" by Toto Cutugno won the Sanremo Music Festival in 1983 and is still widely recognized today.',
         answer: false, // It was not a winner but became iconic.
       },
       {
-        image: '',
+        image:
+          'https://media.rivieratime.news/wp-content/uploads/2023/12/03140848/scenografia-festival-di-sanremo-2024.jpg',
         question:
           '"E penso a te" by Fabrizio De André is known for its poetic lyrics and was a standout performance at Sanremo.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://www.raiplay.it/resizegd/434x-/dl/img/2024/02/10/1707596700420_GettyImages-2000746542.jpg',
         question:
           '"Non ho l\'età" by Gigliola Cinquetti won Sanremo in 1964 and went on to win the Eurovision Song Contest that same year.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://cdn.tuttosport.com/img/2000/1000/2024/01/18/163721530-596ab2b6-38a4-4af7-870c-969640a1e467.jpg',
         question:
           'The song "Perdere l\'amore" by Massimo Ranieri won the Sanremo Music Festival in 1988 and is considered one of his signature songs.',
         answer: true,
@@ -253,13 +288,14 @@ export const APP_DATA_TRUE_FALSE = [
         answer: false, // It was performed earlier, but it became iconic later.
       },
       {
-        image: '',
+        image: 'https://cdn.g4media.ro/wp-content/uploads/2024/02/sanremo.webp',
         question:
           '"La solitudine" by Laura Pausini won the Sanremo Music Festival in 1993 and launched her international career.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://img.ilgcdn.com/sites/default/files/styles/xl/public/foto/2022/02/05/1644089785-ax7lun5wruqwa5rn-fa-ansa.jpg?_=1644089785',
         question:
           '"Zitti e buoni" by Måneskin won the Sanremo Music Festival in 2021 and later won the Eurovision Song Contest, making it a global hit.',
         answer: true,
