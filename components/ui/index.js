@@ -7,6 +7,8 @@ import IconQuestion from './IconQuestion';
 import IconFalseAnswers from './IconFalseAnswers';
 import IconCoins from './IconCoins';
 import IconCorrectAnswers from './IconCorrectAnswers';
+import IconGoBack from './IconGoBack';
+import IconLock from './IconLock';
 
 export {
   CustomLinearGradient,
@@ -18,4 +20,6 @@ export {
   IconFalseAnswers,
   IconCoins,
   IconCorrectAnswers,
+  IconGoBack,
+  IconLock,
 };

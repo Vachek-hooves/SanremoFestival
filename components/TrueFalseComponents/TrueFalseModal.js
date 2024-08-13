@@ -4,10 +4,17 @@ import {COLOR} from '../../constant/colors';
 import {useAppContext} from '../../store/app_context';
 import {useNavigation} from '@react-navigation/native';
 
-const TrueFalseModal = ({restart, id, complexity, score}) => {
+const TrueFalseModal = ({
+  restart,
+  id,
+  complexity,
+  score,
+  correctAnswer,
+  countCorrectAnswers,
+}) => {
   const navigation = useNavigation();
   const {openNextLvlAddScore} = useAppContext();
-  
+
   const openNextLevelFn = () => {
     // console.log(id, score, complexity);
     openNextLvlAddScore(id, score, complexity);
@@ -21,15 +28,25 @@ const TrueFalseModal = ({restart, id, complexity, score}) => {
           <Text style={{color: COLOR.red}}>({complexity})</Text>
         </Text>
         <View>
+          <Text style={styles.text}>Correct answers {countCorrectAnswers}</Text>
+        </View>
+        <View>
           <Text style={styles.text}>You achieved {score} points</Text>
+        </View>
+        <View>
+          <Text style={styles.text}>
+            To pass this level you need more then {complexity == 'easy' ? 6 : 8} correct answers
+          </Text>
         </View>
         <View style={{flexDirection: 'row', gap: 10, marginVertical: 20}}>
           <TouchableOpacity onPress={restart} style={styles.btn}>
             <Text style={styles.btnText}>restart</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={openNextLevelFn} style={styles.btn}>
-            <Text style={styles.btnText}>save score</Text>
-          </TouchableOpacity>
+          {countCorrectAnswers > 6 && (
+            <TouchableOpacity onPress={openNextLevelFn} style={styles.btn}>
+              <Text style={styles.btnText}>save score</Text>
+            </TouchableOpacity>
+          )}
         </View>
       </ScreenLayour>
     </BlurContainer>

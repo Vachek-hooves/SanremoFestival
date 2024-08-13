@@ -11,6 +11,6 @@ export const COLOR = {
   red: '#FF0000',
   true: '#06D001',
   darkGreen: '#1A5319',
-
+  lockedLevel: '#3C3D37',
   ocean: '#1F316F',
 };

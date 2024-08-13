@@ -4,7 +4,7 @@ import {BlurContainer, ImagedBackground, MainScreenBtn} from '../components/ui';
 const MainScreen = () => {
   return (
     <ImagedBackground>
-      <BlurContainer blurAmount={3}>
+      <BlurContainer blurAmount={2}>
         <MainContainerLayout
           style={{justifyContent: 'center', alignItems: 'center'}}>
           <MainScreenBtn screen={'GameScreen'}>Game</MainScreenBtn>
