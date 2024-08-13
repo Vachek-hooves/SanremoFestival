@@ -1,11 +1,5 @@
-import {StyleSheet, Text, View} from 'react-native';
-import {
-  BlurContainer,
-  CustomLinearGradient,
-  ImagedBackground,
-  MainScreenBtn,
-  ScreenLayour,
-} from '../components/ui';
+import {StyleSheet} from 'react-native';
+import {BlurContainer, ImagedBackground, MainScreenBtn} from '../components/ui';
 import MainContainerLayout from '../components/layout/MainContainerLayout';
 
 const GameScreen = () => {

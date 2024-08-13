@@ -7,8 +7,9 @@ import {useNavigation} from '@react-navigation/native';
 const TrueFalseModal = ({restart, id, complexity, score}) => {
   const navigation = useNavigation();
   const {openNextLvlAddScore} = useAppContext();
+  
   const openNextLevelFn = () => {
-    console.log(id, score, complexity);
+    // console.log(id, score, complexity);
     openNextLvlAddScore(id, score, complexity);
     navigation.navigate('TrueFalseScreen', complexity);
   };

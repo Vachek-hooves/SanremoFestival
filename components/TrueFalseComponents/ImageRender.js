@@ -4,7 +4,7 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 const ImageRender = ({image}) => {
   const [isError, setIsError] = useState(false);
 
-  console.log(image);
+  // console.log(image);
   return (
     <View style={styles.imageContainer}>
       <Image

@@ -14,7 +14,6 @@ export const AppProvider = ({children}) => {
   const [easyTrueFalse, setEasyTrueFalse] = useState([]);
   const [hardTrueFalse, setHardTrueFalse] = useState([]);
   const [quiz, setQuiz] = useState([]);
-  console.log(easyTrueFalse);
 
   useEffect(() => {
     bootAllData();
@@ -33,8 +32,8 @@ export const AppProvider = ({children}) => {
       setEasyTrueFalse(easyTrue);
 
       if (hardTrue.length === 0) {
-        await saveDataByKey(APP_DATA_TRUE_FALSE, 'easy');
-        hardTrue = await fetchDataByKey('easy');
+        await saveDataByKey(APP_DATA_TRUE_FALSE, 'hard');
+        hardTrue = await fetchDataByKey('hard');
       }
       setHardTrueFalse(hardTrue);
 
@@ -48,8 +47,10 @@ export const AppProvider = ({children}) => {
   };
 
   const openNextLvlAddScore = async (id, score, complexity) => {
+    console.log(id, score, complexity);
     try {
       const gameData = await fetchDataByKey(complexity);
+      console.log('data to be changed',gameData);
       const currentIndex = gameData.findIndex(game => game.id === id);
       if (currentIndex !== -1) {
         const updatedGame = gameData.map((game, i) => {
@@ -60,22 +61,19 @@ export const AppProvider = ({children}) => {
           }
           return game;
         });
+        console.log('CONTEXT FUNCTION', updatedGame);
 
         await saveDataByKey(updatedGame, complexity);
-        
-        console.log(updatedGame);
-        switch (complexity) {
-          case 'easy':
-            setEasyTrueFalse(updatedGame);
-            break;
-          case 'hard':
-            setHardTrueFalse(updatedGame);
-            break;
-          default:
-            break;
+
+        if (complexity === 'easy') {
+          setEasyTrueFalse(updatedGame);
+        } else if (complexity === 'hard') {
+          setHardTrueFalse(updatedGame);
         }
       }
-    } catch (error) {}
+    } catch (error) {
+      console.error('Failed to update and save score/active state', error);
+    }
   };
 
   const requiredLevel = complexity => {

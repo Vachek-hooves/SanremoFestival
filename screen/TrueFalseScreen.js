@@ -7,7 +7,8 @@ const TrueFalseScreen = ({route, navigation}) => {
   const complexity = route.params;
   const {requiredLevel} = useAppContext();
   const data = requiredLevel(complexity);
-  //   console.log(data);
+  // console.log(data);
+  console.log(data.map(item => item.score));
 
   function renderList({item}) {
     const id = item.id;
@@ -17,7 +18,7 @@ const TrueFalseScreen = ({route, navigation}) => {
         style={styles.renderListBtn}
         data={item}
         onPress={() => navigation.navigate('TrueFalseGame', {complexity, id})}>
-        <Text style={styles.renderListText}>{item.topic}</Text>
+        <Text style={styles.renderListText}>{item.topic} </Text>
       </TouchableOpacity>
     );
   }

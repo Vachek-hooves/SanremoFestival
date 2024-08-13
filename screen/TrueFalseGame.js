@@ -26,6 +26,7 @@ const TrueFalseGame = ({route}) => {
   const {requiredLevel} = useAppContext();
   const quizData = requiredLevel(complexity);
   const DATA = quizData.find(item => item.id === id);
+//   console.log(quizData);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentOption, setCurrectOption] = useState(null);
@@ -55,7 +56,7 @@ const TrueFalseGame = ({route}) => {
   };
 
   const nextQuestionHanler = () => {
-    console.log(currentIndex, allQuestions.length - 1);
+    // console.log(currentIndex, allQuestions.length - 1);
     if (currentIndex === allQuestions.length - 1) {
       setIsModal(true);
     } else {
