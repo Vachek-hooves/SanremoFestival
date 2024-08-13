@@ -7,12 +7,14 @@ export const AppContext = createContext({
   hardTrueFalse: [],
   quiz: [],
   requiredLevel: () => {},
+  openNextLvlAddScore: () => {},
 });
 
 export const AppProvider = ({children}) => {
   const [easyTrueFalse, setEasyTrueFalse] = useState([]);
   const [hardTrueFalse, setHardTrueFalse] = useState([]);
   const [quiz, setQuiz] = useState([]);
+  console.log(easyTrueFalse);
 
   useEffect(() => {
     bootAllData();
@@ -45,6 +47,37 @@ export const AppProvider = ({children}) => {
     }
   };
 
+  const openNextLvlAddScore = async (id, score, complexity) => {
+    try {
+      const gameData = await fetchDataByKey(complexity);
+      const currentIndex = gameData.findIndex(game => game.id === id);
+      if (currentIndex !== -1) {
+        const updatedGame = gameData.map((game, i) => {
+          if (i === currentIndex) {
+            return {...game, score: score};
+          } else if (i === currentIndex + 1) {
+            return {...game, active: true};
+          }
+          return game;
+        });
+
+        await saveDataByKey(updatedGame, complexity);
+        
+        console.log(updatedGame);
+        switch (complexity) {
+          case 'easy':
+            setEasyTrueFalse(updatedGame);
+            break;
+          case 'hard':
+            setHardTrueFalse(updatedGame);
+            break;
+          default:
+            break;
+        }
+      }
+    } catch (error) {}
+  };
+
   const requiredLevel = complexity => {
     switch (complexity) {
       case 'easy':
@@ -56,7 +89,13 @@ export const AppProvider = ({children}) => {
     }
   };
 
-  const value = {easyTrueFalse, hardTrueFalse, quiz, requiredLevel};
+  const value = {
+    easyTrueFalse,
+    hardTrueFalse,
+    quiz,
+    requiredLevel,
+    openNextLvlAddScore,
+  };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 

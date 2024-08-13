@@ -22,7 +22,7 @@ function App() {
             options={{
               // animation: 'fade_from_bottom',
               animation: 'fade',
-              animationDuration: 1500,
+              animationDuration: 200,
             }}
           />
           <Stack.Screen name="GameScreen" component={GameScreen} />

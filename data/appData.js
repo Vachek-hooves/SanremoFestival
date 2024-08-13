@@ -1,5 +1,7 @@
 export const APP_DATA_TRUE_FALSE = [
   {
+    score: '0',
+    active: true,
     topic: 'Festival History',
     id: 'tf1',
     about:
@@ -34,19 +36,21 @@ export const APP_DATA_TRUE_FALSE = [
       },
       {
         image:
-          'https://www.money.it/local/cache-vignettes/L300xH168/1f7823f459f594263ebdb5ebaa97ca-29937.jpg?1704465965',
+          'https://tourismmedia.italia.it/is/image/mitur/1600X1000_cosa_vedere_a_sanremo_hero-2?wid=1080&hei=660&fit=constrain,1&fmt=webp',
         question:
           'The winner of the Sanremo Music Festival is automatically selected to represent Italy in the Eurovision Song Contest.',
         answer: false,
       },
       {
-        image: '',
+        image:
+          'https://as1.ftcdn.net/v2/jpg/02/79/55/80/1000_F_279558002_G68I47EWlPE3olrVtwp9fIpY8tSGXIhd.jpg',
         question:
           'The festival has introduced many famous Italian artists to the music scene, including Andrea Bocelli and Eros Ramazzotti.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://tripmydream.cc/travelhub/travel/block_gallery/10/7506/gallery_big_107506.jpg?1400',
         question:
           'The Sanremo Music Festival is known for its traditional format of only allowing solo performers to compete. ',
         answer: false,
@@ -59,13 +63,15 @@ export const APP_DATA_TRUE_FALSE = [
         answer: true,
       },
       {
-        image: 'https://www.tg24.info/network/wp-content/uploads/2023/02/sanremo-scenografia-cupola-2023-scaled-1-680x365_c.jpgs',
+        image:
+          'https://as1.ftcdn.net/v2/jpg/02/79/55/80/1000_F_279558002_G68I47EWlPE3olrVtwp9fIpY8tSGXIhd.jpg',
         question:
           'The Sanremo Music Festival is broadcast live on Italian television and is watched by millions of viewers each year.',
         answer: true,
       },
       {
-        image: 'https://www.luminex.be/wp-content/uploads/2021/06/WhatsApp-Image-2021-03-04-at-14.22.52-4-1024x768.jpegs',
+        image:
+          'https://www.italythisway.com/images/places/fullsize/sanremo.jpg',
         question:
           'The festival has a significant cultural impact and is considered an important event in the Italian music calendar.',
         answer: true,
@@ -73,6 +79,8 @@ export const APP_DATA_TRUE_FALSE = [
     ],
   },
   {
+    score: '0',
+    active: false,
     topic: 'Festival Winners',
     id: 'tf2',
     about:
@@ -151,6 +159,8 @@ export const APP_DATA_TRUE_FALSE = [
     ],
   },
   {
+    score: '0',
+    active: false,
     topic: 'Festival Famos Performers',
     id: 'tf3',
     about:
@@ -227,6 +237,8 @@ export const APP_DATA_TRUE_FALSE = [
     ],
   },
   {
+    score: '0',
+    active: false,
     topic: 'Festival Best Songs',
     id: 'tf4',
     about:
@@ -234,7 +246,7 @@ export const APP_DATA_TRUE_FALSE = [
     query: [
       {
         image:
-          'https://acrimonia.it/user/pages/06.articles/sanremo-amore-mio/Sanremo.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Partitissima_modugno67.jpg/267px-Partitissima_modugno67.jpg',
         question:
           'The song "Volare" by Domenico Modugno won the Sanremo Music Festival in 1958 and became an international hit.',
         answer: true,
@@ -255,47 +267,49 @@ export const APP_DATA_TRUE_FALSE = [
       },
       {
         image:
-          'https://staticfanpage.akamaized.net/wp-content/uploads/sites/33/2023/12/festival-sanremo-scenografia-palco.gif',
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Toto_cutugno_en_2014.jpg/800px-Toto_cutugno_en_2014.jpg',
         question:
           'The song "L\'italiano" by Toto Cutugno won the Sanremo Music Festival in 1983 and is still widely recognized today.',
         answer: false, // It was not a winner but became iconic.
       },
       {
         image:
-          'https://media.rivieratime.news/wp-content/uploads/2023/12/03140848/scenografia-festival-di-sanremo-2024.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/c/c4/DeAndr%C3%A9_1960.jpg',
         question:
           '"E penso a te" by Fabrizio De André is known for its poetic lyrics and was a standout performance at Sanremo.',
         answer: true,
       },
       {
         image:
-          'https://www.raiplay.it/resizegd/434x-/dl/img/2024/02/10/1707596700420_GettyImages-2000746542.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/6/62/Gigliola_Cinquetti_%281966%29.jpg',
         question:
           '"Non ho l\'età" by Gigliola Cinquetti won Sanremo in 1964 and went on to win the Eurovision Song Contest that same year.',
         answer: true,
       },
       {
         image:
-          'https://cdn.tuttosport.com/img/2000/1000/2024/01/18/163721530-596ab2b6-38a4-4af7-870c-969640a1e467.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Massimo_Ranieri_Concert_2009_Taormina-Sicilia-Italy_-_Creative_Commons_by_gnuckx.jpg/1200px-Massimo_Ranieri_Concert_2009_Taormina-Sicilia-Italy_-_Creative_Commons_by_gnuckx.jpg',
         question:
           'The song "Perdere l\'amore" by Massimo Ranieri won the Sanremo Music Festival in 1988 and is considered one of his signature songs.',
         answer: true,
       },
       {
-        image: '',
+        image:
+          'https://m.media-amazon.com/images/M/MV5BYjdjYjA3MjUtZDgzNS00Mjk1LWI1MGEtZjM4MzE2ZDFjY2E3XkEyXkFqcGdeQXVyMzI5NDcxNzI@._V1_.jpg',
         question:
           '"Azzurro" by Adriano Celentano was a hit after its performance at Sanremo in 1968 and is still popular today.',
         answer: false, // It was performed earlier, but it became iconic later.
       },
       {
-        image: 'https://cdn.g4media.ro/wp-content/uploads/2024/02/sanremo.webp',
+        image:
+          'https://upload.wikimedia.org/wikipedia/it/thumb/9/9c/La_solitudineLauraPausini.jpg/800px-La_solitudineLauraPausini.jpg',
         question:
           '"La solitudine" by Laura Pausini won the Sanremo Music Festival in 1993 and launched her international career.',
         answer: true,
       },
       {
         image:
-          'https://img.ilgcdn.com/sites/default/files/styles/xl/public/foto/2022/02/05/1644089785-ax7lun5wruqwa5rn-fa-ansa.jpg?_=1644089785',
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Maneskin_2018.jpg/1200px-Maneskin_2018.jpg',
         question:
           '"Zitti e buoni" by Måneskin won the Sanremo Music Festival in 2021 and later won the Eurovision Song Contest, making it a global hit.',
         answer: true,

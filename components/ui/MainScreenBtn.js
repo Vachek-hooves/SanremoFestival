@@ -17,7 +17,7 @@ const MainScreenBtn = ({children, screen, complexity}) => {
 export default MainScreenBtn;
 
 const styles = StyleSheet.create({
-  text: {fontWeight: '600', fontSize: 32, letterSpacing: 3},
+  text: {fontWeight: '600', fontSize: 32, letterSpacing: 3, color: COLOR.ocean},
   container: {
     paddingHorizontal: 40,
     borderEndEndRadius: 40,

@@ -6,4 +6,11 @@ export const COLOR = {
 
   green: '#399918',
   yellow: '#9BEC00',
+  white: '#F8EDED',
+  btnColor: '#F3FEB8',
+  red: '#FF0000',
+  true: '#06D001',
+  darkGreen: '#1A5319',
+
+  ocean: '#1F316F',
 };
