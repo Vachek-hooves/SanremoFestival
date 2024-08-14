@@ -40,7 +40,7 @@ const QuizGameScreen = ({route}) => {
     // setIsAnswerModal(true);
     if (choosen === answer) {
       setScore(score + 1);
-      //   setCountCorrectAnswers(countCorrectAnswers + 1);
+        setCountCorrectAnswers(countCorrectAnswers + 1);
     }
     setNext(true);
     setConfirmAnswer(true);

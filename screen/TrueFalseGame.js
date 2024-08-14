@@ -103,7 +103,7 @@ const TrueFalseGame = ({route}) => {
   return (
     <CustomLinearGradient>
       <ScreenLayour style={{alignItems: 'center'}}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false} >
           <TopicBox topic={DATA.topic} />
           <QuestionCounter
             score={score}
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    bottom: '15%',
+    bottom: '20%',
   },
   timerContainer: {
     flexDirection: 'row',

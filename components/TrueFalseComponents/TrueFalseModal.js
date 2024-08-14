@@ -20,6 +20,9 @@ const TrueFalseModal = ({
     openNextLvlAddScore(id, score, complexity);
     navigation.navigate('TrueFalseScreen', complexity);
   };
+  function navigateToMenu() {
+    navigation.navigate('TrueFalseScreen', complexity);
+  }
   return (
     <BlurContainer blurAmount={9}>
       <ScreenLayour style={{alignItems: 'center', justifyContent: 'center'}}>
@@ -35,16 +38,21 @@ const TrueFalseModal = ({
         </View>
         <View>
           <Text style={styles.text}>
-            To pass this level you need more then {complexity == 'easy' ? 6 : 8} correct answers
+            To pass this level you need more then {complexity == 'easy' ? 6 : 8}{' '}
+            correct answers
           </Text>
         </View>
         <View style={{flexDirection: 'row', gap: 10, marginVertical: 20}}>
           <TouchableOpacity onPress={restart} style={styles.btn}>
             <Text style={styles.btnText}>restart</Text>
           </TouchableOpacity>
-          {countCorrectAnswers > 6 && (
+          {countCorrectAnswers > 8 ? (
             <TouchableOpacity onPress={openNextLevelFn} style={styles.btn}>
               <Text style={styles.btnText}>save score</Text>
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity style={styles.btn} onPress={navigateToMenu}>
+              <Text style={styles.btnText}>menu</Text>
             </TouchableOpacity>
           )}
         </View>

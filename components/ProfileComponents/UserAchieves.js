@@ -30,14 +30,16 @@ const UserAchieves = () => {
           data={easyTrueFalse}
           key={item => item.id}
           renderItem={renderUserAchieves}
+          showsVerticalScrollIndicator={false}
         />
       </View>
-      <View style={{marginTop: 20}}>
+      <View style={{marginTop: 20, height: 250}}>
         <Text style={styles.headerText}>HARD </Text>
         <FlatList
           data={hardTrueFalse}
           key={item => item.id}
           renderItem={renderUserAchieves}
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </View>

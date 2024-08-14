@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Dimensions} from 'react-native';
 import {
   BlurContainer,
   IconGoBack,
@@ -6,6 +6,8 @@ import {
   MainScreenBtn,
 } from '../components/ui';
 import MainContainerLayout from '../components/layout/MainContainerLayout';
+
+const {height} = Dimensions.get('window');
 
 const GameScreen = () => {
   return (

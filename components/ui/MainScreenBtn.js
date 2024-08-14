@@ -1,6 +1,9 @@
-import {Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {Text, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
 import {COLOR} from '../../constant/colors';
 import {useNavigation} from '@react-navigation/native';
+import {fontGameScreen} from '../styles/generalStyles';
+
+const {height} = Dimensions.get('window');
 
 const MainScreenBtn = ({children, screen, complexity}) => {
   const navigation = useNavigation();
@@ -17,7 +20,13 @@ const MainScreenBtn = ({children, screen, complexity}) => {
 export default MainScreenBtn;
 
 const styles = StyleSheet.create({
-  text: {fontWeight: '600', fontSize: 32, letterSpacing: 3, color: COLOR.ocean},
+  text: {
+    fontWeight: '600',
+    fontSize: fontGameScreen(),
+    letterSpacing: 3,
+    color: COLOR.ocean,
+    textAlign: 'center',
+  },
   container: {
     paddingHorizontal: 40,
     borderEndEndRadius: 40,

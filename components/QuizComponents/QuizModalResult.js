@@ -26,14 +26,14 @@ const QuizModalResult = ({
         <Text>Yuo play "{topic}"</Text>
         <View>
           <Text style={styles.text}>
-            To pass this level you need more then 8 correct answers
+            To pass this level you should reach 90% of correct answers
           </Text>
         </View>
         <View style={{flexDirection: 'row', gap: 10, marginVertical: 20}}>
           <TouchableOpacity onPress={restart} style={styles.btn}>
             <Text style={styles.btnText}>restart</Text>
           </TouchableOpacity>
-          {score > 1 && (
+          {score > 9 && (
             <TouchableOpacity onPress={openNextLevelFn} style={styles.btn}>
               <Text style={styles.btnText}>Next Level</Text>
             </TouchableOpacity>

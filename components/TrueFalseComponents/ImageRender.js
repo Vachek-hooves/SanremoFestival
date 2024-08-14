@@ -6,7 +6,7 @@ const ImageRender = ({image}) => {
 
   // console.log(image);
   return (
-    <View style={styles.imageContainer}>
+    <View style={styles.imageContainer} resizeMode='center'>
       <Image
         style={styles.image}
         source={
@@ -24,7 +24,7 @@ export default ImageRender;
 
 const styles = StyleSheet.create({
   imageContainer: {
-    width: '100%',
+    // width: '90%',
     height: 300,
     borderRadius: 20,
     marginVertical: 20,
