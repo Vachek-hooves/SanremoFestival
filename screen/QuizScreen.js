@@ -1,4 +1,5 @@
-import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, FlatList} from 'react-native';
+import {useAppContext} from '../store/app_context';
 import {
   BlurContainer,
   IconGoBack,
@@ -6,17 +7,13 @@ import {
   ImagedBackground,
   ScreenLayour,
 } from '../components/ui';
-import {useAppContext} from '../store/app_context';
 import {COLOR} from '../constant/colors';
 
-const TrueFalseScreen = ({route, navigation}) => {
-  const complexity = route.params;
-  const {requiredLevel} = useAppContext();
-  const data = requiredLevel(complexity);
-  // console.log(data);
-  console.log(data.map(item => item.score));
+const QuizScreen = ({navigation}) => {
+  const {quiz} = useAppContext();
 
   function renderList({item}) {
+    // console.log(item.id)
     const id = item.id;
     const disable = !item.active;
 
@@ -32,25 +29,21 @@ const TrueFalseScreen = ({route, navigation}) => {
           },
         ]}
         data={item}
-        onPress={() => navigation.navigate('TrueFalseGame', {complexity, id})}>
-        <Text style={styles.renderListText}>{item.topic} </Text>
+        onPress={() => navigation.navigate('QuizGameScreen', {id})}>
+        <Text style={styles.renderListText}>{item.topic}</Text>
         {disable && <IconLock />}
       </TouchableOpacity>
     );
   }
 
   return (
-    // <CustomLinearGradient>
     <ImagedBackground>
       <BlurContainer blurAmount={9}>
         <ScreenLayour>
-          <View style={styles.complexBox}>
-            <Text style={styles.complexText}>{complexity.toUpperCase()}</Text>
-          </View>
-          <View style={styles.flatListContainer}>
+          <View>
             <FlatList
-              data={data}
-              keyExtractor={item => item.id}
+              data={quiz}
+              key={item => item.id}
               renderItem={renderList}
               contentContainerStyle={styles.flatListContentContainer}
             />
@@ -59,11 +52,10 @@ const TrueFalseScreen = ({route, navigation}) => {
         <IconGoBack />
       </BlurContainer>
     </ImagedBackground>
-    // </CustomLinearGradient>
   );
 };
 
-export default TrueFalseScreen;
+export default QuizScreen;
 
 const styles = StyleSheet.create({
   renderListBtn: {
@@ -81,8 +73,13 @@ const styles = StyleSheet.create({
     fontSize: 26,
     textAlign: 'center',
     color: COLOR.ocean,
+    letterSpacing: 3,
   },
-  flatListContentContainer: {justifyContent: 'center', height: '100%'},
+  flatListContentContainer: {
+    justifyContent: 'center',
+    height: '100%',
+    width: '100%',
+  },
   complexBox: {
     backgroundColor: COLOR.yellow + 90,
     borderRadius: 10,

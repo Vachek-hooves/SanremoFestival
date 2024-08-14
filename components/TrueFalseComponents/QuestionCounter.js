@@ -1,11 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import {COLOR} from '../../constant/colors';
-import {
-  IconCoins,
-  IconCorrectAnswers,
-  IconFalseAnswers,
-  IconQuestion,
-} from '../ui';
+import {IconCoins, IconCorrectAnswers, IconQuestion} from '../ui';
 
 const QuestionCounter = ({
   questionNum,
@@ -22,17 +17,17 @@ const QuestionCounter = ({
         </Text>
       </View>
       <View style={styles.iconContainer}>
-        <IconCoins />
-        <Text
-          style={{color: COLOR.strongYello, fontWeight: '700', fontSize: 28}}>
-          {score}
-        </Text>
-      </View>
-      <View style={styles.iconContainer}>
         <IconQuestion />
         <Text
           style={{color: COLOR.darkOrange, fontWeight: '700', fontSize: 28}}>
           {questionNum}/{totalQuestions}
+        </Text>
+      </View>
+      <View style={styles.iconContainer}>
+        <IconCoins />
+        <Text
+          style={{color: COLOR.strongYello, fontWeight: '700', fontSize: 28}}>
+          {score}
         </Text>
       </View>
     </View>
@@ -53,6 +48,6 @@ const styles = StyleSheet.create({
   rootContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    width: '100%',
+    // width: '90%',
   },
 });

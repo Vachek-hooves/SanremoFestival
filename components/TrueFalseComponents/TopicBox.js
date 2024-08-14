@@ -18,5 +18,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     letterSpacing: 2,
     marginVertical: 10,
+    textAlign: 'center',
   },
 });

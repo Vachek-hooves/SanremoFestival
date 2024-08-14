@@ -9,7 +9,7 @@ const WelcomeScreen = ({navigation}) => {
   useEffect(() => {
     Animated.timing(animation, {
       toValue: 1,
-      duration: 500,
+      duration: 1500,
       useNativeDriver: true,
     }).start(() => navigation.replace('MainScreen'));
   }, [animation]);
@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
     fontSize: 40,
     padding: 10,
     color: COLOR.ocean,
-    fontWeight: '600',
+    fontWeight:'700'
   },
 });

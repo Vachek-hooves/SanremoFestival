@@ -3,5 +3,17 @@ import MainScreen from './MainScreen';
 import GameScreen from './GameScreen';
 import TrueFalseScreen from './TrueFalseScreen';
 import TrueFalseGame from './TrueFalseGame';
+import QuizScreen from './QuizScreen';
+import QuizGameScreen from './QuizGameScreen';
+import ProfileScreen from './ProfileScreen';
 
-export {WelcomeScreen, MainScreen, GameScreen, TrueFalseScreen, TrueFalseGame};
+export {
+  WelcomeScreen,
+  MainScreen,
+  GameScreen,
+  TrueFalseScreen,
+  TrueFalseGame,
+  QuizScreen,
+  QuizGameScreen,
+  ProfileScreen,
+};

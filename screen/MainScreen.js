@@ -1,15 +1,20 @@
 import MainContainerLayout from '../components/layout/MainContainerLayout';
-import {BlurContainer, ImagedBackground, MainScreenBtn} from '../components/ui';
+import {
+  BlurContainer,
+  IconUser,
+  ImagedBackground,
+  MainScreenBtn,
+} from '../components/ui';
 
 const MainScreen = () => {
   return (
     <ImagedBackground>
       <BlurContainer blurAmount={2}>
+        <IconUser />
         <MainContainerLayout
           style={{justifyContent: 'center', alignItems: 'center'}}>
           <MainScreenBtn screen={'GameScreen'}>Game</MainScreenBtn>
           <MainScreenBtn>Gameplay</MainScreenBtn>
-          <MainScreenBtn>Profile</MainScreenBtn>
         </MainContainerLayout>
       </BlurContainer>
     </ImagedBackground>

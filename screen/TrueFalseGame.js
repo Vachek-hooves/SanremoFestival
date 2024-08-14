@@ -3,13 +3,19 @@ import {
   InteractionManager,
   Modal,
   Pressable,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
 import {useState, useEffect} from 'react';
-import {CustomLinearGradient, ScreenLayour} from '../components/ui';
+import {
+  CustomLinearGradient,
+  CustomTimer,
+  IconTimeout,
+  ScreenLayour,
+} from '../components/ui';
 import {
   ImageRender,
   Next,
@@ -36,15 +42,22 @@ const TrueFalseGame = ({route}) => {
   const [score, setScore] = useState(0);
   const [next, setNext] = useState(false);
   const [countCorrectAnswers, setCountCorrectAnswers] = useState(0);
-  const [resetTimer, setResetTimer] = useState(false);
   const [isModal, setIsModal] = useState(false);
   const [isAnswerModal, setIsAnswerModal] = useState(false);
   const [confirmAnswer, setConfirmAnswer] = useState(false);
+  const [resetTimer, setResetTimer] = useState(false);
+  const [timerFinish, setTimerFinish] = useState(false);
 
   const allQuestions = DATA.query;
   const currentQuestion = allQuestions[currentIndex].question || '';
   const currentImage = allQuestions[currentIndex].image;
   const correctAnswer = allQuestions[currentIndex].answer;
+
+  useEffect(() => {
+    if (timerFinish) {
+      setIsModal(true);
+    }
+  }, [timerFinish]);
 
   const validationHandler = choosen => {
     setCurrentOption(choosen);
@@ -82,56 +95,70 @@ const TrueFalseGame = ({route}) => {
     setScore(0);
     setIsAnswerModal(false);
     setCountCorrectAnswers(0);
+    setResetTimer(true);
+    setTimerFinish(false);
+    setTimeout(() => setResetTimer(false), 100);
   };
 
   return (
     <CustomLinearGradient>
       <ScreenLayour style={{alignItems: 'center'}}>
-        <TopicBox topic={DATA.topic} />
-        <QuestionCounter
-          score={score}
-          questionNum={currentIndex + 1}
-          totalQuestions={allQuestions.length}
-          correctAnswer={countCorrectAnswers}
-          complexity={complexity}
-        />
-        <ImageRender image={currentImage} />
-        <Question question={currentQuestion} />
-        <TrueFalseContainer
-          choosenAnswer={validationHandler}
-          disabled={isDisabled}
-          correctAnswer={correctAnswer}
-          currentOption={currentOption}
-        />
-        <Modal visible={isModal} animationType="slide" transparent={true}>
-          <TrueFalseModal
-            restart={playAgain}
-            id={id}
-            complexity={complexity}
+        <ScrollView>
+          <TopicBox topic={DATA.topic} />
+          <QuestionCounter
             score={score}
-            countCorrectAnswers={countCorrectAnswers}
+            questionNum={currentIndex + 1}
+            totalQuestions={allQuestions.length}
+            correctAnswer={countCorrectAnswers}
+            complexity={complexity}
           />
-        </Modal>
-        {confirmAnswer && currentOption !== correctAnswer ? (
-          <View style={styles.answerCheckContainer}>
-            <Text style={{fontSize: 28, fontWeight: '700', color: COLOR.red}}>
-              You answer is WRONG
-            </Text>
-            {next && <Next onPress={nextQuestionHanler} />}
-          </View>
-        ) : currentOption == correctAnswer ? (
-          <View style={styles.answerCheckContainer}>
-            <Text
-              style={{
-                fontSize: 28,
-                fontWeight: '700',
-                color: COLOR.yellow,
-              }}>
-              You answer is CORRECT
-            </Text>
-            {next && <Next onPress={nextQuestionHanler} />}
-          </View>
-        ) : null}
+          {complexity === 'hard' && (
+            <View style={styles.timerContainer}>
+              <IconTimeout />
+              <CustomTimer
+                resetTimer={resetTimer}
+                setTimeOut={setTimerFinish}
+              />
+            </View>
+          )}
+          <ImageRender image={currentImage} />
+          <Question question={currentQuestion} />
+          <TrueFalseContainer
+            choosenAnswer={validationHandler}
+            disabled={isDisabled}
+            correctAnswer={correctAnswer}
+            currentOption={currentOption}
+          />
+          <Modal visible={isModal} animationType="slide" transparent={true}>
+            <TrueFalseModal
+              restart={playAgain}
+              id={id}
+              complexity={complexity}
+              score={score}
+              countCorrectAnswers={countCorrectAnswers}
+            />
+          </Modal>
+          {confirmAnswer && currentOption !== correctAnswer ? (
+            <View style={styles.answerCheckContainer}>
+              <Text style={{fontSize: 28, fontWeight: '700', color: COLOR.red}}>
+                You answer is WRONG
+              </Text>
+              {next && <Next onPress={nextQuestionHanler} />}
+            </View>
+          ) : currentOption == correctAnswer ? (
+            <View style={styles.answerCheckContainer}>
+              <Text
+                style={{
+                  fontSize: 28,
+                  fontWeight: '700',
+                  color: COLOR.yellow,
+                }}>
+                You answer is CORRECT
+              </Text>
+              {next && <Next onPress={nextQuestionHanler} />}
+            </View>
+          ) : null}
+        </ScrollView>
       </ScreenLayour>
     </CustomLinearGradient>
   );
@@ -147,5 +174,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     bottom: '15%',
+  },
+  timerContainer: {
+    flexDirection: 'row',
+    gap: 3,
+    backgroundColor: COLOR.darkGreen,
+    paddingVertical: 6,
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    marginVertical: 5,
+    width: '30%',
+    justifyContent: 'center',
+    alignSelf: 'center',
   },
 });

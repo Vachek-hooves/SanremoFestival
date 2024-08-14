@@ -3,6 +3,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {
   GameScreen,
   MainScreen,
+  ProfileScreen,
+  QuizGameScreen,
+  QuizScreen,
   TrueFalseGame,
   TrueFalseScreen,
   WelcomeScreen,
@@ -22,12 +25,15 @@ function App() {
             options={{
               // animation: 'fade_from_bottom',
               animation: 'fade',
-              animationDuration: 200,
+              animationDuration: 1500,
             }}
           />
           <Stack.Screen name="GameScreen" component={GameScreen} />
           <Stack.Screen name="TrueFalseScreen" component={TrueFalseScreen} />
           <Stack.Screen name="TrueFalseGame" component={TrueFalseGame} />
+          <Stack.Screen name="QuizScreen" component={QuizScreen} />
+          <Stack.Screen name="QuizGameScreen" component={QuizGameScreen} />
+          <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </AppProvider>

@@ -20,7 +20,7 @@ const GameScreen = () => {
           <MainScreenBtn screen={'TrueFalseScreen'} complexity={'hard'}>
             True False (hard)
           </MainScreenBtn>
-          <MainScreenBtn>Quiz</MainScreenBtn>
+          <MainScreenBtn screen={'QuizScreen'}>Quiz</MainScreenBtn>
         </MainContainerLayout>
         {/* </CustomLinearGradient> */}
         <IconGoBack />

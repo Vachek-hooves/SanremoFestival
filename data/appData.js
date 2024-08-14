@@ -322,6 +322,7 @@ export const APP_DATA_TRUE_FALSE = [
 
 export const APP_DATA_QUIZ = [
   {
+    active: true,
     id: 'q1',
     description:
       ' Sanremo is known as the "city of flowers" due to its many flower festivals and the cultivation of roses, carnations and other flowers. An international flower festival is held here every year.',
@@ -330,31 +331,31 @@ export const APP_DATA_QUIZ = [
     query: [
       {
         question: 'Which country is home to the city of San Remo?',
-        options: ['Spain', 'Italy', 'France'],
+        options: ['Spain', 'France', 'Italy'],
         answer: 'Italy',
       },
       {
         question: 'What river flows near San Remo?',
-        options: ['Ticino River', 'Arno River', 'Porto River'],
+        options: ['Arno River', 'Ticino River', 'Porto River'],
         answer: 'Arno River',
       },
       {
         question: 'What famous festival is held in San Remo every year?',
-        options: ['Wine festival', 'Song festival', 'Film festival'],
+        options: ['Song festival', 'Wine festival', 'Film festival'],
         answer: 'Song festival',
       },
       {
         question: 'What architectural monument is the symbol of San Remo?',
         options: [
           "St. Martin's Cathedral",
-          'Villa Nobiller',
           'Casino San Remo',
+          'Villa Nobiller',
         ],
         answer: 'Villa Nobiller',
       },
       {
         question: 'In what year was the casino in San Remo founded?',
-        options: ['1905', '1910', '1925'],
+        options: ['1905', '1925', '1910'],
         answer: '1910',
       },
       {
@@ -371,27 +372,28 @@ export const APP_DATA_QUIZ = [
       {
         question:
           'Which of these dishes is traditional for the Liguria region where San Remo is located?',
-        options: ['Paella', 'Pesto', 'Baklava'],
+        options: ['Pesto', 'Paella', 'Baklava'],
         answer: 'Pesto',
       },
       {
         question:
           'What is the approximate distance from San Remo to the border with France?',
-        options: ['10 km', '30 km', '50 km'],
+        options: ['30 km', '10 km', '50 km'],
         answer: '30 km',
       },
       {
         question: 'What famous sport takes place in San Remo every year?',
         options: [
           'Formula 1',
-          'Bicycle race "Milan — San Remo"',
           'Olympic Games',
+          'Bicycle race "Milan — San Remo"',
         ],
         answer: 'Bicycle race "Milan — San Remo"',
       },
     ],
   },
   {
+    active: false,
     id: 'q2',
     description:
       ' Sanremo is famous for its annual Italian Song Festival, which has been held since 1951. This event has become an important part of Italian music culture and serves as a qualifying round for the Eurovision Song Contest.',
@@ -400,13 +402,13 @@ export const APP_DATA_QUIZ = [
     query: [
       {
         question: 'What famous flower is grown in the vicinity of San Remo?',
-        options: ['Tulip', 'Rose', 'Lavender'],
+        options: ['Tulip', 'Lavender', 'Rose'],
         answer: 'Rose',
       },
       {
         question:
           'Which sport is popular in San Remo due to its location on the coast?',
-        options: ['Surfing', 'Swimming', 'Golf'],
+        options: ['Swimming', 'Surfing', 'Golf'],
         answer: 'Swimming',
       },
       {
@@ -423,7 +425,7 @@ export const APP_DATA_QUIZ = [
       },
       {
         question: 'Which of these historic buildings is located in San Remo?',
-        options: ['Montalto Castle', 'Villa Nobiller', "St. Peter's Cathedral"],
+        options: ['Montalto Castle', "St. Peter's Cathedral", 'Villa Nobiller'],
         answer: 'Villa Nobiller',
       },
       {
@@ -431,8 +433,8 @@ export const APP_DATA_QUIZ = [
           'What popular activity is available for tourists in San Remo?',
         options: [
           'Alpine skiing',
-          'Walking along the embankment',
           'Snowboarding',
+          'Walking along the embankment',
         ],
         answer: 'Walking along the embankment',
       },
@@ -444,14 +446,14 @@ export const APP_DATA_QUIZ = [
       {
         question:
           'Which of these traditional dishes is popular in San Remo restaurants?',
-        options: ['Lasagna', 'Focaccia', 'Pizza'],
+        options: ['Lasagna', 'Pizza', 'Focaccia'],
         answer: 'Focaccia',
       },
       {
         question: 'Which of these natural attractions is near San Remo?',
         options: [
-          'Casentino National Park',
           'Nature Park "Portofino"',
+          'Casentino National Park',
           'Gargano National Park',
         ],
         answer: 'Nature Park "Portofino"',
@@ -468,6 +470,7 @@ export const APP_DATA_QUIZ = [
     ],
   },
   {
+    active: false,
     id: 'q3',
     description:
       'Sanremo is home to numerous luxurious villas and palaces built in the Art Nouveau style. Villa Nobel, for example, was the residence of Alfred Nobel, who spent his winter vacations here.',
@@ -483,13 +486,13 @@ export const APP_DATA_QUIZ = [
       {
         question:
           'Which street is famous for its shops and boutiques in San Remo?',
-        options: ['Via Roma', 'Via Garibaldi', 'Via Verdi'],
+        options: ['Via Garibaldi', 'Via Roma', 'Via Verdi'],
         answer: 'Via Garibaldi',
       },
       {
         question:
           'What holiday celebrated in San Remo is dedicated to flowers?',
-        options: ['Rose Festival', 'Festival of flowers', 'Festival of petals'],
+        options: ['Festival of flowers', 'Rose Festival', 'Festival of petals'],
         answer: 'Festival of flowers',
       },
       {
@@ -501,18 +504,18 @@ export const APP_DATA_QUIZ = [
       {
         question:
           'Which of these architectural styles is characteristic of buildings in San Remo?',
-        options: ['Gothic', 'Art Deco', 'Neo-Renaissance'],
+        options: ['Art Deco', 'Gothic', 'Neo-Renaissance'],
         answer: 'Art Deco',
       },
       {
         question: 'Which of these natural landscapes surrounds San Remo?',
-        options: ['Alps mountains', 'Mediterranean forests', 'Sahara desert'],
+        options: ['Alps mountains', 'Sahara desert', 'Mediterranean forests'],
         answer: 'Mediterranean forests',
       },
       {
         question:
           'What type of fishing is popular in the waters around San Remo?',
-        options: ['Tuna fishing', 'Cod fishing', 'Salmon fishing'],
+        options: ['Cod fishing', 'Tuna fishing', 'Salmon fishing'],
         answer: 'Cod fishing',
       },
       {
@@ -525,8 +528,8 @@ export const APP_DATA_QUIZ = [
         question:
           'Which of these cultural traditions is characteristic of San Remo?',
         options: [
-          'Production of pottery products',
           'Cultivation of olives',
+          'Production of pottery products',
           'Traditional dances',
         ],
         answer: 'Cultivation of olives',
@@ -540,6 +543,7 @@ export const APP_DATA_QUIZ = [
     ],
   },
   {
+    active: false,
     id: 'q4',
     description:
       'Sanremo has a Mediterranean climate, making it a popular resort all year round. Mild winters and warm summers attract tourists from all over the world.',
@@ -554,8 +558,8 @@ export const APP_DATA_QUIZ = [
       {
         question: 'Which natural park is located near San Remo?',
         options: [
-          'Cinque Terre National Park',
           'Porto Venere National Park',
+          'Cinque Terre National Park',
           'Ligurian Mountains National Park',
         ],
         answer: 'Ligurian Mountains National Park',

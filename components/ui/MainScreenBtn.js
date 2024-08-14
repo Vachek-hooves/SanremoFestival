@@ -5,7 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 const MainScreenBtn = ({children, screen, complexity}) => {
   const navigation = useNavigation();
   function navigationHandler() {
-    navigation.navigate(`${screen}`, complexity);
+    navigation.navigate(`${screen}`, complexity || null);
   }
   return (
     <TouchableOpacity onPress={navigationHandler} style={styles.container}>
