@@ -16,6 +16,7 @@ import {useState, useEffect} from 'react';
 import {COLOR} from '../constant/colors';
 import {fetchProfileAsync, saveProfileAsync} from '../store/useStorageUtils';
 import AboutUser from '../components/ProfileComponents/AboutUser';
+import UserAchieves from '../components/ProfileComponents/UserAchieves';
 
 const ProfileScreen = () => {
   const [user, setUser] = useState(null);
@@ -85,10 +86,11 @@ const ProfileScreen = () => {
               </View>
             </View>
           )}
-        </ScreenLayour>
-        <View style={{position: 'absolute', bottom: 30, right: 0}}>
+          {user && <UserAchieves />}
+        {/* <View style={{position: 'absolute', bottom: 30, right: -20}}>
           <IconGoBack />
-        </View>
+        </View> */}
+        </ScreenLayour>
       </BlurContainer>
     </ImagedBackground>
   );

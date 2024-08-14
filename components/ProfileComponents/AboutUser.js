@@ -10,12 +10,12 @@ import {useState, useEffect} from 'react';
 import {updateProfileAsync} from '../../store/useStorageUtils';
 import {COLOR} from '../../constant/colors';
 import {PickUserImage} from '../ui';
+import UserAchieves from './UserAchieves';
 
 const AboutUser = ({data}) => {
   const [isRename, setIsRename] = useState(false);
   const [profileName, setProfileName] = useState(data.name);
   const [profileImage, setProfileImage] = useState(data.image);
-  
 
   const nameChange = async () => {
     await updateProfileAsync('name', profileName);
@@ -24,7 +24,7 @@ const AboutUser = ({data}) => {
 
   const replaceImage = async image => {
     setProfileImage(image);
-    await updateProfile('image', image);
+    await updateProfileAsync('image', image);
   };
 
   return (
@@ -49,7 +49,13 @@ const AboutUser = ({data}) => {
           </View>
         </View>
       ) : (
-        <View style={{alignItems: 'center', flex: 1, marginTop: 20, gap: 30}}>
+        <View
+          style={{
+            marginTop: 20,
+            flexDirection: 'row',
+            gap: 10,
+            minWidth: '90%',
+          }}>
           <PickUserImage saveImage={image => replaceImage(image)}>
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
               <Image source={{uri: profileImage}} style={styles.image} />
@@ -58,7 +64,9 @@ const AboutUser = ({data}) => {
               </Text>
             </View>
           </PickUserImage>
-          <TouchableOpacity onPress={() => setIsRename(true)}>
+          <TouchableOpacity
+            onPress={() => setIsRename(true)}
+            style={{justifyContent: 'center'}}>
             <Text style={styles.textName}>{profileName}</Text>
           </TouchableOpacity>
         </View>
@@ -71,14 +79,13 @@ export default AboutUser;
 
 const styles = StyleSheet.create({
   image: {
-    height: 300,
-    width: 200,
-    width: 300,
+    height: 120,
+    width: 120,
     borderRadius: 10,
     borderWidth: 1,
     position: 'relative',
     zIndex: 2,
-    borderRadius: 10,
+    borderRadius: 60,
   },
   textName: {
     fontSize: 36,
