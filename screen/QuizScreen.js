@@ -49,7 +49,14 @@ const QuizScreen = ({navigation}) => {
             />
           </View>
         </ScreenLayour>
-        <IconGoBack />
+        <View
+          style={{
+            position: 'absolute',
+            bottom: 60,
+            right: 70,
+          }}>
+          <IconGoBack />
+        </View>
       </BlurContainer>
     </ImagedBackground>
   );

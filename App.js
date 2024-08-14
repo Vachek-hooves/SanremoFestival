@@ -1,6 +1,7 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {
+  About,
   GameScreen,
   MainScreen,
   ProfileScreen,
@@ -34,6 +35,7 @@ function App() {
           <Stack.Screen name="QuizScreen" component={QuizScreen} />
           <Stack.Screen name="QuizGameScreen" component={QuizGameScreen} />
           <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+          <Stack.Screen name="AboutScreen" component={About} />
         </Stack.Navigator>
       </NavigationContainer>
     </AppProvider>

@@ -14,7 +14,7 @@ const MainScreen = () => {
         <MainContainerLayout
           style={{justifyContent: 'center', alignItems: 'center'}}>
           <MainScreenBtn screen={'GameScreen'}>Game</MainScreenBtn>
-          <MainScreenBtn>Gameplay</MainScreenBtn>
+          <MainScreenBtn screen={'AboutScreen'}>About</MainScreenBtn>
         </MainContainerLayout>
       </BlurContainer>
     </ImagedBackground>

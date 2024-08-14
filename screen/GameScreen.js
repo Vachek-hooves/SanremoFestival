@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {
   BlurContainer,
   IconGoBack,
@@ -23,7 +23,14 @@ const GameScreen = () => {
           <MainScreenBtn screen={'QuizScreen'}>Quiz</MainScreenBtn>
         </MainContainerLayout>
         {/* </CustomLinearGradient> */}
-        <IconGoBack />
+        <View
+          style={{
+            position: 'absolute',
+            bottom: 60,
+            right: 70,
+          }}>
+          <IconGoBack />
+        </View>
       </BlurContainer>
     </ImagedBackground>
   );

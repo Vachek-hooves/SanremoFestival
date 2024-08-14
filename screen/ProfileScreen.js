@@ -87,7 +87,7 @@ const ProfileScreen = () => {
             </View>
           )}
           {user && <UserAchieves />}
-        {/* <View style={{position: 'absolute', bottom: 30, right: -20}}>
+          {/* <View style={{position: 'absolute', bottom: 30, right: -20}}>
           <IconGoBack />
         </View> */}
         </ScreenLayour>

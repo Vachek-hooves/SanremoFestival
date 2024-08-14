@@ -7,9 +7,9 @@ const IconGoBack = () => {
   return (
     <View
       style={{
-        position: 'absolute',
-        bottom: 60,
-        right: 70,
+        // position: 'absolute',
+        // bottom: 60,
+        // right: 70,
       }}>
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <Image

@@ -6,6 +6,7 @@ import TrueFalseGame from './TrueFalseGame';
 import QuizScreen from './QuizScreen';
 import QuizGameScreen from './QuizGameScreen';
 import ProfileScreen from './ProfileScreen';
+import About from './About';
 
 export {
   WelcomeScreen,
@@ -16,4 +17,5 @@ export {
   QuizScreen,
   QuizGameScreen,
   ProfileScreen,
+  About,
 };
