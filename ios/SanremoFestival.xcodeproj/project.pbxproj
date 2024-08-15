@@ -475,6 +475,8 @@
 				DEVELOPMENT_TEAM = NKZ4X293F5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SanremoFestival/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sanremo Festival Quiz";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -503,6 +505,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NKZ4X293F5;
 				INFOPLIST_FILE = SanremoFestival/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sanremo Festival Quiz";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
