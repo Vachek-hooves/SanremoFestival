@@ -64,7 +64,7 @@ const ProfileScreen = () => {
           {user ? (
             <AboutUser data={user} />
           ) : (
-            <View style={{width: '90%', alignItems: 'center'}}>
+            <View style={{width: '90%', alignItems: 'center', marginTop: 150}}>
               <Text style={styles.profileName}>Profile Name</Text>
               <TextInput
                 value={profileInputs.name}
@@ -76,7 +76,7 @@ const ProfileScreen = () => {
                   <Text style={styles.pickerText}>Choose the photo</Text>
                 </PickUserImage>
               </View>
-              <View style={{flexDirection: 'row', gap: 10, marginVertical: 20}}>
+              <View style={{flexDirection: 'row', gap: 10, marginTop: 70}}>
                 <TouchableOpacity onPress={submit} style={styles.btn}>
                   <Text style={styles.btnText}>Save</Text>
                 </TouchableOpacity>
@@ -87,10 +87,16 @@ const ProfileScreen = () => {
             </View>
           )}
           {user && <UserAchieves />}
-          {/* <View style={{position: 'absolute', bottom: 30, right: -20}}>
-          <IconGoBack />
-        </View> */}
         </ScreenLayour>
+        <View
+          style={{
+            marginBottom: 40,
+            alignSelf: 'flex-end',
+            marginHorizontal: 30,
+            marginTop: 15,
+          }}>
+          <IconGoBack />
+        </View>
       </BlurContainer>
     </ImagedBackground>
   );

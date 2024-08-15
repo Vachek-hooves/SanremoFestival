@@ -3,7 +3,7 @@ import {COLOR} from '../../constant/colors';
 
 const Question = ({question}) => {
   return (
-    <View style={{height:120}}>
+    <View style={{height:100}}>
       <Text
         style={{
           fontWeight: '600',

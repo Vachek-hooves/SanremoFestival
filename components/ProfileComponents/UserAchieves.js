@@ -1,6 +1,7 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {useAppContext} from '../../store/app_context';
 import {COLOR} from '../../constant/colors';
+import {IconGoBack} from '../ui';
 
 const UserAchieves = () => {
   const {easyTrueFalse, hardTrueFalse, quiz} = useAppContext();
@@ -24,7 +25,7 @@ const UserAchieves = () => {
 
   return (
     <View style={{flex: 1}}>
-      <View style={{marginTop: 20}}>
+      {/* <View style={{marginTop: 20}}>
         <Text style={styles.headerText}>EASY </Text>
         <FlatList
           data={easyTrueFalse}
@@ -33,7 +34,7 @@ const UserAchieves = () => {
           showsVerticalScrollIndicator={false}
         />
       </View>
-      <View style={{marginTop: 20, height: 250}}>
+      <View style={{marginTop: 10, height: 250}}>
         <Text style={styles.headerText}>HARD </Text>
         <FlatList
           data={hardTrueFalse}
@@ -41,7 +42,59 @@ const UserAchieves = () => {
           renderItem={renderUserAchieves}
           showsVerticalScrollIndicator={false}
         />
-      </View>
+      </View> */}
+      <Text style={styles.headerText}>EASY </Text>
+      {
+        <ScrollView
+          contentContainerStyle={styles.scrollContainer}
+          showsVerticalScrollIndicator={false}>
+          {easyTrueFalse.map((item, i) => {
+            return (
+              <View
+                style={{flexDirection: 'row', gap: 10, marginVertical: 4}}
+                key={i}>
+                <View style={styles.levelTextContainer}>
+                  <Text style={styles.levelText}>{item.topic}</Text>
+                </View>
+                <View style={styles.levelScoreContainer}>
+                  <Text style={styles.levelScore}>{item.score}</Text>
+                </View>
+              </View>
+            );
+          })}
+        </ScrollView>
+      }
+      <Text style={styles.headerText}>HARD</Text>
+      {
+        <ScrollView
+          contentContainerStyle={styles.scrollContainer}
+          showsVerticalScrollIndicator={false}>
+          {hardTrueFalse.map((item, i) => {
+            return (
+              <View
+                style={{flexDirection: 'row', gap: 10, marginVertical: 4}}
+                key={i}>
+                <View style={styles.levelTextContainer}>
+                  <Text style={styles.levelText}>{item.topic}</Text>
+                </View>
+                <View style={styles.levelScoreContainer}>
+                  <Text style={styles.levelScore}>{item.score}</Text>
+                </View>
+              </View>
+            );
+          })}
+        </ScrollView>
+      }
+      {/* <View
+        style={{
+          // bottom: 0,
+          right: 20,
+          width: '100%',
+          alignItems: 'flex-end',
+          marginTop:30
+        }}>
+        <IconGoBack />
+      </View> */}
     </View>
   );
 };
@@ -63,6 +116,7 @@ const styles = StyleSheet.create({
     color: COLOR.ocean,
     fontWeight: '700',
     textAlign: 'center',
+    marginVertical: 10,
   },
   scrollContainer: {
     alignItems: 'center',
@@ -71,7 +125,8 @@ const styles = StyleSheet.create({
     // gap: 5,
     // height:'60%'
     // flexGrow:1
-    flex: 1,
+    // flex: 1,
+    height: 330,
   },
   levelContainer: {
     flexDirection: 'row',

@@ -37,10 +37,13 @@ const TrueFalseModal = ({
           <Text style={styles.text}>You achieved {score} points</Text>
         </View>
         <View>
-          <Text style={styles.text}>
-            To pass this level you need more then {complexity == 'easy' ? 6 : 8}{' '}
-            correct answers
-          </Text>
+          {countCorrectAnswers < 8 ? (
+            <Text style={styles.text}>
+              To pass this level you need more then {8} correct answers
+            </Text>
+          ) : (
+            ''
+          )}
         </View>
         <View style={{flexDirection: 'row', gap: 10, marginVertical: 20}}>
           <TouchableOpacity onPress={restart} style={styles.btn}>

@@ -1,5 +1,6 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {COLOR} from '../../constant/colors';
+import {optionsContainerHeight} from '../styles/generalStyles';
 
 const QuizOptions = ({
   options,
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
     // backgroundColor: COLORS.warm,
     borderRadius: 32,
     padding: 5,
-    height: 80,
+    height: optionsContainerHeight(),
     justifyContent: 'center',
     width: '90%',
   },
@@ -70,6 +71,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '800',
     // color: COLORS.darkBlue,
-    fontSize: 24,
+    fontSize: 20,
   },
 });

@@ -20,6 +20,9 @@ const QuizModalResult = ({
     unlockQuizNextLevel(id);
     navigation.navigate('QuizScreen');
   };
+  function navigateToMenu() {
+    navigation.navigate('QuizScreen');
+  }
   return (
     <BlurContainer blurAmount={9}>
       <ScreenLayour style={{alignItems: 'center', justifyContent: 'center'}}>
@@ -33,9 +36,13 @@ const QuizModalResult = ({
           <TouchableOpacity onPress={restart} style={styles.btn}>
             <Text style={styles.btnText}>restart</Text>
           </TouchableOpacity>
-          {score > 9 && (
+          {score > 9 ? (
             <TouchableOpacity onPress={openNextLevelFn} style={styles.btn}>
               <Text style={styles.btnText}>Next Level</Text>
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity style={styles.btn} onPress={navigateToMenu}>
+              <Text style={styles.btnText}>menu</Text>
             </TouchableOpacity>
           )}
         </View>

@@ -51,9 +51,10 @@ const QuizScreen = ({navigation}) => {
         </ScreenLayour>
         <View
           style={{
-            position: 'absolute',
-            bottom: 60,
-            right: 70,
+            marginBottom: 40,
+            alignSelf: 'flex-end',
+            marginHorizontal: 30,
+            marginTop: 15,
           }}>
           <IconGoBack />
         </View>
