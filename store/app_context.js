@@ -9,6 +9,7 @@ export const AppContext = createContext({
   requiredLevel: () => {},
   openNextLvlAddScore: () => {},
   unlockQuizNextLevel: () => {},
+  resetTrueFalseGame: () => {},
 });
 
 export const AppProvider = ({children}) => {
@@ -111,6 +112,19 @@ export const AppProvider = ({children}) => {
     }
   };
 
+  const resetTrueFalseGame = async complexity => {
+    try {
+      saveDataByKey(APP_DATA_TRUE_FALSE, complexity);
+      if (complexity === 'easy') {
+        setEasyTrueFalse(APP_DATA_TRUE_FALSE);
+      } else if (complexity === 'hard') {
+        setHardTrueFalse(APP_DATA_TRUE_FALSE);
+      }
+    } catch (error) {
+      console.error('Data reseting error', error);
+    }
+  };
+
   const value = {
     easyTrueFalse,
     hardTrueFalse,
@@ -118,6 +132,7 @@ export const AppProvider = ({children}) => {
     requiredLevel,
     openNextLvlAddScore,
     unlockQuizNextLevel,
+    resetTrueFalseGame,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

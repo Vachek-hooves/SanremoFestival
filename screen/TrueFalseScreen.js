@@ -1,4 +1,11 @@
-import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Dimensions,
+} from 'react-native';
 import {
   BlurContainer,
   IconGoBack,
@@ -8,6 +15,11 @@ import {
 } from '../components/ui';
 import {useAppContext} from '../store/app_context';
 import {COLOR} from '../constant/colors';
+import IconResetGame from '../components/ui/IconResetGame';
+
+const {height, width} = Dimensions.get('window');
+
+const WIDTH = width * 0.4;
 
 const TrueFalseScreen = ({route, navigation}) => {
   const complexity = route.params;
@@ -61,7 +73,10 @@ const TrueFalseScreen = ({route, navigation}) => {
             position: 'absolute',
             bottom: 60,
             right: 70,
+            flexDirection: 'row',
+            gap: WIDTH,
           }}>
+          <IconResetGame complexity={complexity} />
           <IconGoBack />
         </View>
       </BlurContainer>
