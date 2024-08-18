@@ -1,19 +1,10 @@
-import {StyleSheet, View, Dimensions} from 'react-native';
-import {
-  BlurContainer,
-  IconGoBack,
-  ImagedBackground,
-  MainScreenBtn,
-} from '../components/ui';
+import {View} from 'react-native';
+import {IconGoBack, ImagedBackground, MainScreenBtn} from '../components/ui';
 import MainContainerLayout from '../components/layout/MainContainerLayout';
-
-const {height} = Dimensions.get('window');
 
 const GameScreen = () => {
   return (
     <ImagedBackground style={{padding: 5}}>
-      {/* <BlurContainer blurAmount={5}> */}
-      {/* <CustomLinearGradient> */}
       <MainContainerLayout
         style={{justifyContent: 'center', alignItems: 'center'}}>
         <MainScreenBtn screen={'TrueFalseScreen'} complexity={'easy'}>
@@ -24,7 +15,7 @@ const GameScreen = () => {
         </MainScreenBtn>
         <MainScreenBtn screen={'QuizScreen'}>Quiz</MainScreenBtn>
       </MainContainerLayout>
-      {/* </CustomLinearGradient> */}
+
       <View
         style={{
           position: 'absolute',
@@ -33,11 +24,8 @@ const GameScreen = () => {
         }}>
         <IconGoBack />
       </View>
-      {/* </BlurContainer> */}
     </ImagedBackground>
   );
 };
 
 export default GameScreen;
-
-const styles = StyleSheet.create({});
