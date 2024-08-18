@@ -44,7 +44,7 @@ const QuizOptions = ({
                     ? COLOR.white
                     : option == currentOption
                     ? COLOR.white
-                    : COLOR.ocean,
+                    : COLOR.softYello,
               },
             ]}>
             {option}

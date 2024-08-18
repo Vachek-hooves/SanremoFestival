@@ -6,11 +6,11 @@ import {
   Image,
   TextInput,
 } from 'react-native';
-import {useState, useEffect} from 'react';
+import {useState,} from 'react';
 import {updateProfileAsync} from '../../store/useStorageUtils';
 import {COLOR} from '../../constant/colors';
 import {PickUserImage} from '../ui';
-import UserAchieves from './UserAchieves';
+
 
 const AboutUser = ({data}) => {
   const [isRename, setIsRename] = useState(false);
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   textName: {
     fontSize: 36,
     fontWeight: '800',
-    color: COLOR.yellow,
+    color: COLOR.gold,
     letterSpacing: 5,
   },
   input: {

@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     borderStartStartRadius: 40,
     width: '100%',
     alignItems: 'center',
-    backgroundColor: COLOR.yellow + 90,
+    backgroundColor: COLOR.gold,
     marginVertical: 25,
     paddingVertical: 20,
   },

@@ -8,15 +8,15 @@ import {
 
 const MainScreen = () => {
   return (
-    <ImagedBackground>
-      <BlurContainer blurAmount={2}>
-        <IconUser />
-        <MainContainerLayout
-          style={{justifyContent: 'center', alignItems: 'center'}}>
-          <MainScreenBtn screen={'GameScreen'}>Game</MainScreenBtn>
-          <MainScreenBtn screen={'AboutScreen'}>About</MainScreenBtn>
-        </MainContainerLayout>
-      </BlurContainer>
+    <ImagedBackground style={{justifyContent: 'center', alignItems: 'center'}}>
+      {/* <BlurContainer blurAmount={2}> */}
+      <IconUser />
+      <MainContainerLayout
+        style={{justifyContent: 'center', alignItems: 'center'}}>
+        <MainScreenBtn screen={'GameScreen'}>Game</MainScreenBtn>
+        <MainScreenBtn screen={'AboutScreen'}>About</MainScreenBtn>
+      </MainContainerLayout>
+      {/* </BlurContainer> */}
     </ImagedBackground>
   );
 };

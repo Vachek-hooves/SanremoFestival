@@ -3,6 +3,7 @@ export const COLOR = {
   darkOrange: '#FF8343',
   strongYello: '#FFB200',
   softYello: '#F3FEB8',
+  gold: '#FFB200',
 
   green: '#399918',
   yellow: '#9BEC00',

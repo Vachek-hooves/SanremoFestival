@@ -14,6 +14,7 @@ import {
   CustomLinearGradient,
   CustomTimer,
   IconTimeout,
+  ImagedBackground,
   ScreenLayour,
 } from '../components/ui';
 import {
@@ -101,66 +102,69 @@ const TrueFalseGame = ({route}) => {
   };
 
   return (
-    <CustomLinearGradient>
-      <ScreenLayour style={{alignItems: 'center'}}>
-        <ScrollView showsVerticalScrollIndicator={false} >
-          <TopicBox topic={DATA.topic} />
-          <QuestionCounter
-            score={score}
-            questionNum={currentIndex + 1}
-            totalQuestions={allQuestions.length}
-            correctAnswer={countCorrectAnswers}
-            complexity={complexity}
-          />
-          {complexity === 'hard' && (
-            <View style={styles.timerContainer}>
-              <IconTimeout />
-              <CustomTimer
-                resetTimer={resetTimer}
-                setTimeOut={setTimerFinish}
-              />
-            </View>
-          )}
-          <ImageRender image={currentImage} />
-          <Question question={currentQuestion} />
-          <TrueFalseContainer
-            choosenAnswer={validationHandler}
-            disabled={isDisabled}
-            correctAnswer={correctAnswer}
-            currentOption={currentOption}
-          />
-          <Modal visible={isModal} animationType="slide" transparent={true}>
-            <TrueFalseModal
-              restart={playAgain}
-              id={id}
-              complexity={complexity}
+    <ImagedBackground>
+      {/* <CustomLinearGradient> */}
+        <ScreenLayour style={{alignItems: 'center'}}>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <TopicBox topic={DATA.topic} />
+            <QuestionCounter
               score={score}
-              countCorrectAnswers={countCorrectAnswers}
+              questionNum={currentIndex + 1}
+              totalQuestions={allQuestions.length}
+              correctAnswer={countCorrectAnswers}
+              complexity={complexity}
             />
-          </Modal>
-          {confirmAnswer && currentOption !== correctAnswer ? (
-            <View style={styles.answerCheckContainer}>
-              <Text style={{fontSize: 28, fontWeight: '700', color: COLOR.red}}>
-                You answer is WRONG
-              </Text>
-              {next && <Next onPress={nextQuestionHanler} />}
-            </View>
-          ) : currentOption == correctAnswer ? (
-            <View style={styles.answerCheckContainer}>
-              <Text
-                style={{
-                  fontSize: 28,
-                  fontWeight: '700',
-                  color: COLOR.yellow,
-                }}>
-                You answer is CORRECT
-              </Text>
-              {next && <Next onPress={nextQuestionHanler} />}
-            </View>
-          ) : null}
-        </ScrollView>
-      </ScreenLayour>
-    </CustomLinearGradient>
+            {complexity === 'hard' && (
+              <View style={styles.timerContainer}>
+                <IconTimeout />
+                <CustomTimer
+                  resetTimer={resetTimer}
+                  setTimeOut={setTimerFinish}
+                />
+              </View>
+            )}
+            <ImageRender image={currentImage} />
+            <Question question={currentQuestion} />
+            <TrueFalseContainer
+              choosenAnswer={validationHandler}
+              disabled={isDisabled}
+              correctAnswer={correctAnswer}
+              currentOption={currentOption}
+            />
+            <Modal visible={isModal} animationType="slide" transparent={true}>
+              <TrueFalseModal
+                restart={playAgain}
+                id={id}
+                complexity={complexity}
+                score={score}
+                countCorrectAnswers={countCorrectAnswers}
+              />
+            </Modal>
+            {confirmAnswer && currentOption !== correctAnswer ? (
+              <View style={styles.answerCheckContainer}>
+                <Text
+                  style={{fontSize: 28, fontWeight: '700', color: COLOR.red}}>
+                  You answer is WRONG
+                </Text>
+                {next && <Next onPress={nextQuestionHanler} />}
+              </View>
+            ) : currentOption == correctAnswer ? (
+              <View style={styles.answerCheckContainer}>
+                <Text
+                  style={{
+                    fontSize: 28,
+                    fontWeight: '700',
+                    color: COLOR.yellow,
+                  }}>
+                  You answer is CORRECT
+                </Text>
+                {next && <Next onPress={nextQuestionHanler} />}
+              </View>
+            ) : null}
+          </ScrollView>
+        </ScreenLayour>
+      {/* </CustomLinearGradient> */}
+    </ImagedBackground>
   );
 };
 

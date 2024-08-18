@@ -10,7 +10,7 @@ const IconResetGame = ({complexity}) => {
   return (
     <TouchableOpacity onPress={resetGameHandler}>
       <Image
-        style={{width: 50, height: 50, tintColor: COLOR.ocean}}
+        style={{width: 50, height: 50, tintColor: COLOR.gold}}
         source={require(`../../assets/img/icon/resetCircle.png`)}
       />
     </TouchableOpacity>

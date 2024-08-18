@@ -74,6 +74,6 @@ const styles = StyleSheet.create({
     fontSize: 26,
     marginVertical: 10,
   },
-  btn: {backgroundColor: COLOR.green, flex: 1, borderRadius: 10},
+  btn: {backgroundColor: COLOR.gold, flex: 1, borderRadius: 10},
   btnText: {textAlign: 'center', fontSize: 22, color: COLOR.ocean, padding: 5},
 });

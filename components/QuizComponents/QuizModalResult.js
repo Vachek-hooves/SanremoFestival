@@ -1,18 +1,10 @@
-import {StyleSheet, Text, View, Modal, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {COLOR} from '../../constant/colors';
 import {BlurContainer, ScreenLayour} from '../ui';
 import {useNavigation} from '@react-navigation/native';
 import {useAppContext} from '../../store/app_context';
 
-const QuizModalResult = ({
-  restart,
-  id,
-  complexity,
-  score,
-  correctAnswer,
-  countCorrectAnswers,
-  topic,
-}) => {
+const QuizModalResult = ({restart, id, score, topic}) => {
   const navigation = useNavigation();
   const {unlockQuizNextLevel} = useAppContext();
 
@@ -61,6 +53,11 @@ const styles = StyleSheet.create({
     fontSize: 26,
     marginVertical: 10,
   },
-  btn: {backgroundColor: COLOR.green, flex: 1, borderRadius: 10},
+  btn: {
+    backgroundColor: COLOR.gold,
+    flex: 1,
+    borderRadius: 10,
+    marginHorizontal: 20,
+  },
   btnText: {textAlign: 'center', fontSize: 22, color: COLOR.ocean, padding: 5},
 });

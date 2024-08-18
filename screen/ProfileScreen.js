@@ -59,7 +59,7 @@ const ProfileScreen = () => {
 
   return (
     <ImagedBackground>
-      <BlurContainer blurAmount={3}>
+      <BlurContainer blurAmount={0}>
         <ScreenLayour style={{width: '100%'}}>
           {user ? (
             <AboutUser data={user} />
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   pickerText: {fontSize: 20, color: COLOR.darkOrange, fontWeight: '600'},
   input: {
     borderWidth: 1,
-    backgroundColor: COLOR.yellow + 90,
+    backgroundColor: COLOR.gold + 90,
     paddingHorizontal: 15,
     marginVertical: 10,
     fontSize: 20,
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     maxWidth: 250,
     borderRadius: 90,
   },
-  btn: {backgroundColor: COLOR.green, flex: 1, borderRadius: 10},
+  btn: {backgroundColor: COLOR.gold, flex: 1, borderRadius: 10},
   btnText: {
     textAlign: 'center',
     fontSize: 22,

@@ -11,7 +11,7 @@ import {COLOR} from '../constant/colors';
 const About = () => {
   return (
     <ImagedBackground>
-      <BlurContainer>
+      <BlurContainer blurAmount={1}>
         <ScreenLayour style={{alignItems: 'center'}}>
           <View>
             <Text
@@ -61,7 +61,7 @@ const About = () => {
           </ScrollView>
           <View
             style={{
-            //   backgroundColor: COLOR.yellow,
+              //   backgroundColor: COLOR.yellow,
               paddingHorizontal: 40,
               marginVertical: 40,
               alignItems: 'flex-end',
@@ -83,6 +83,6 @@ const styles = StyleSheet.create({
     marginTop: 30,
     fontSize: 26,
     textAlign: 'center',
-    color: COLOR.ocean,
+    color: COLOR.softYello,
   },
 });

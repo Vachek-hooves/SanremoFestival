@@ -1,14 +1,12 @@
-import {StyleSheet, Text, View, ScrollView, Modal} from 'react-native';
+import {StyleSheet, View, ScrollView, Modal} from 'react-native';
 import {useAppContext} from '../store/app_context';
 import {useState} from 'react';
-import {COLOR} from '../constant/colors';
-import {CustomLinearGradient, ScreenLayour} from '../components/ui';
+import {ImagedBackground, ScreenLayour} from '../components/ui';
 import {
   Next,
   Question,
   QuestionCounter,
   TopicBox,
-  TrueFalseModal,
 } from '../components/TrueFalseComponents';
 import QuizOptions from '../components/QuizComponents/QuizOptions';
 import QuizModalResult from '../components/QuizComponents/QuizModalResult';
@@ -74,7 +72,8 @@ const QuizGameScreen = ({route}) => {
   };
 
   return (
-    <CustomLinearGradient>
+    <ImagedBackground>
+      {/* <CustomLinearGradient> */}
       <ScreenLayour>
         <ScrollView showsVerticalScrollIndicator={false}>
           <TopicBox topic={gameData.topic} />
@@ -107,7 +106,8 @@ const QuizGameScreen = ({route}) => {
           </Modal>
         </ScrollView>
       </ScreenLayour>
-    </CustomLinearGradient>
+      {/* </CustomLinearGradient> */}
+    </ImagedBackground>
   );
 };
 

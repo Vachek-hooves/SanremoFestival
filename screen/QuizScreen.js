@@ -23,9 +23,7 @@ const QuizScreen = ({navigation}) => {
         style={[
           styles.renderListBtn,
           {
-            backgroundColor: disable
-              ? COLOR.lockedLevel + 90
-              : COLOR.yellow + 90,
+            backgroundColor: disable ? COLOR.lockedLevel + 90 : COLOR.gold,
           },
         ]}
         data={item}
@@ -37,28 +35,28 @@ const QuizScreen = ({navigation}) => {
   }
 
   return (
-    <ImagedBackground>
-      <BlurContainer blurAmount={9}>
-        <ScreenLayour>
-          <View>
-            <FlatList
-              data={quiz}
-              key={item => item.id}
-              renderItem={renderList}
-              contentContainerStyle={styles.flatListContentContainer}
-            />
-          </View>
-        </ScreenLayour>
-        <View
-          style={{
-            marginBottom: 40,
-            alignSelf: 'flex-end',
-            marginHorizontal: 30,
-            marginTop: 15,
-          }}>
-          <IconGoBack />
+    <ImagedBackground style={{alignItems: 'center'}}>
+      {/* <BlurContainer blurAmount={9}> */}
+      <ScreenLayour>
+        <View>
+          <FlatList
+            data={quiz}
+            key={item => item.id}
+            renderItem={renderList}
+            contentContainerStyle={styles.flatListContentContainer}
+          />
         </View>
-      </BlurContainer>
+      </ScreenLayour>
+      <View
+        style={{
+          marginBottom: 40,
+          alignSelf: 'flex-end',
+          marginHorizontal: 30,
+          marginTop: 15,
+        }}>
+        <IconGoBack />
+      </View>
+      {/* </BlurContainer> */}
     </ImagedBackground>
   );
 };

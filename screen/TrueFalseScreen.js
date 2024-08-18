@@ -38,9 +38,7 @@ const TrueFalseScreen = ({route, navigation}) => {
         style={[
           styles.renderListBtn,
           {
-            backgroundColor: disable
-              ? COLOR.lockedLevel + 90
-              : COLOR.yellow + 90,
+            backgroundColor: disable ? COLOR.lockedLevel + 90 : COLOR.gold,
           },
         ]}
         data={item}
@@ -53,33 +51,33 @@ const TrueFalseScreen = ({route, navigation}) => {
 
   return (
     // <CustomLinearGradient>
-    <ImagedBackground>
-      <BlurContainer blurAmount={9}>
-        <ScreenLayour>
-          <View style={styles.complexBox}>
-            <Text style={styles.complexText}>{complexity.toUpperCase()}</Text>
-          </View>
-          <View style={styles.flatListContainer}>
-            <FlatList
-              data={data}
-              keyExtractor={item => item.id}
-              renderItem={renderList}
-              contentContainerStyle={styles.flatListContentContainer}
-            />
-          </View>
-        </ScreenLayour>
-        <View
-          style={{
-            position: 'absolute',
-            bottom: 60,
-            right: 70,
-            flexDirection: 'row',
-            gap: WIDTH,
-          }}>
-          <IconResetGame complexity={complexity} />
-          <IconGoBack />
+    <ImagedBackground style={{padding: 10}}>
+      {/* <BlurContainer blurAmount={1}> */}
+      <ScreenLayour>
+        <View style={styles.complexBox}>
+          <Text style={styles.complexText}>{complexity.toUpperCase()}</Text>
         </View>
-      </BlurContainer>
+        <View style={styles.flatListContainer}>
+          <FlatList
+            data={data}
+            keyExtractor={item => item.id}
+            renderItem={renderList}
+            contentContainerStyle={styles.flatListContentContainer}
+          />
+        </View>
+      </ScreenLayour>
+      <View
+        style={{
+          position: 'absolute',
+          bottom: 60,
+          right: 70,
+          flexDirection: 'row',
+          gap: WIDTH,
+        }}>
+        <IconResetGame complexity={complexity} />
+        <IconGoBack />
+      </View>
+      {/* </BlurContainer> */}
     </ImagedBackground>
     // </CustomLinearGradient>
   );
@@ -109,7 +107,7 @@ const styles = StyleSheet.create({
     height: '90%',
   },
   complexBox: {
-    backgroundColor: COLOR.yellow + 90,
+    backgroundColor: COLOR.gold,
     borderRadius: 10,
     width: '25%',
     marginTop: 10,

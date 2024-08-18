@@ -1,10 +1,10 @@
 import {ImageBackground} from 'react-native';
 
-const ImagedBackground = ({children}) => {
+const ImagedBackground = ({children, style}) => {
   return (
     <ImageBackground
-      style={{flex: 1}}
-      source={require('../../assets/img/bg/Sanremo.jpg')}>
+      style={[style, {flex: 1}]}
+      source={require('../../assets/img/bg/backgr.png')}>
       {children}
     </ImageBackground>
   );
