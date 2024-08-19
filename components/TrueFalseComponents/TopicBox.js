@@ -13,7 +13,7 @@ export default TopicBox;
 
 const styles = StyleSheet.create({
   text: {
-    color: COLOR.green,
+    color: COLOR.softYello,
     fontSize: 30,
     fontWeight: '500',
     letterSpacing: 2,

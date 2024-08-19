@@ -6,7 +6,7 @@ const BlurContainer = ({children, blurAmount}) => {
     <View style={{justifyContent: 'center', alignItems: 'center'}}>
       <BlurView
         style={styles.absolute}
-        blurType="light"
+        blurType="dark"
         blurAmount={blurAmount}
         reducedTransparencyFallbackColor="white"
       />

@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   iconContainer: {
     flexDirection: 'row',
     gap: 3,
-    backgroundColor: COLOR.darkGreen,
+    backgroundColor: COLOR.lockedLevel,
     paddingVertical: 4,
     borderRadius: 10,
     paddingHorizontal: 6,

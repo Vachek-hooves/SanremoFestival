@@ -18,7 +18,7 @@ const QuizModalResult = ({restart, id, score, topic}) => {
   return (
     <BlurContainer blurAmount={9}>
       <ScreenLayour style={{alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Yuo play "{topic}"</Text>
+        <Text style={{color:COLOR.softYello}}>You play "{topic}"</Text>
         <View>
           <Text style={styles.text}>
             To pass this level you should reach 90% of correct answers
@@ -48,7 +48,7 @@ export default QuizModalResult;
 const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
-    color: COLOR.ocean,
+    color: COLOR.softYello,
     fontWeight: '600',
     fontSize: 26,
     marginVertical: 10,
