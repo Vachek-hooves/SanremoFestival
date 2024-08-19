@@ -11,7 +11,7 @@ import {COLOR} from '../constant/colors';
 const About = () => {
   return (
     <ImagedBackground>
-      <BlurContainer blurAmount={1}>
+      {/* <BlurContainer blurAmount={1}> */}
         <ScreenLayour style={{alignItems: 'center'}}>
           <View>
             <Text
@@ -19,7 +19,7 @@ const About = () => {
                 marginVertical: 20,
                 fontWeight: '700',
                 fontSize: 30,
-                color: COLOR.darkRed,
+                color: COLOR.orange,
               }}>
               Sanremo: The Pearl of Liguria
             </Text>
@@ -70,7 +70,7 @@ const About = () => {
             <IconGoBack />
           </View>
         </ScreenLayour>
-      </BlurContainer>
+      {/* </BlurContainer> */}
     </ImagedBackground>
   );
 };

@@ -59,7 +59,7 @@ const ProfileScreen = () => {
 
   return (
     <ImagedBackground>
-      <BlurContainer blurAmount={0}>
+      {/* <BlurContainer blurAmount={0}> */}
         <ScreenLayour style={{width: '100%'}}>
           {user ? (
             <AboutUser data={user} />
@@ -97,7 +97,7 @@ const ProfileScreen = () => {
           }}>
           <IconGoBack />
         </View>
-      </BlurContainer>
+      {/* </BlurContainer> */}
     </ImagedBackground>
   );
 };
