@@ -4,12 +4,12 @@ import {BlurView} from '@react-native-community/blur';
 const BlurContainer = ({children, blurAmount}) => {
   return (
     <View style={{justifyContent: 'center', alignItems: 'center'}}>
-      <BlurView
+      {/* <BlurView
         style={styles.absolute}
         blurType="light"
         blurAmount={blurAmount}
         reducedTransparencyFallbackColor="white"
-      />
+      /> */}
       <View>{children}</View>
       <Text>Blur Container</Text>
     </View>
